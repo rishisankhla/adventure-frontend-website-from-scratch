@@ -1,0 +1,575 @@
+/*_____________________________HEADER COMMON CSS_______________________________________*/
+
+/*___HEADER css___*/
+#logo { grid-area: logo; }
+#nav { grid-area: nav; }
+#covid { grid-area: covid; }
+
+/*navbar*/
+ul.nav {
+  list-style-type: none;
+  margin: 10;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+li.nav {
+  float: left;
+}
+li.nav a.nav {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/*button animation starting*/
+a.nav:active {
+  transform: translateY(4px);
+}
+
+/*button animation starting*/
+
+li.nav a.nav:hover { /* Change the link color to black on hover */
+  background-color: black;
+  color:white;
+}
+.nav{
+	margin: 15px 10px 10px 5px;
+}
+
+i.material-icons, li.search {
+	margin-top: 20px;
+	margin-bottom: 0px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.material-icons{
+	color:black;
+}
+/*logo*/
+img {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+/*font*/
+
+body
+{
+  font-family: Lora, serif; /*use this font for standard text*/
+  font-size: 100%; /*set a default font-size in percent for the <body> element*/
+  font-size: 1em; /*pixels/16=em; em is used to allow users to resize the text (in the browser menu)*/
+}
+li.nav
+{
+  font-family: Ubuntu, sans-serif;/*use this font for headings etc*/
+  font-size: 1.8em; 
+}
+/* background-color for call-to action areas*/
+.attention
+{
+	background-color: rgb(235,200,21);
+}
+/*video text*/
+@font-face 
+{ 
+	font-family: blanka-regular; 
+	src: url("font/blanka-regular.otf"); 
+} 
+#vidtext
+{
+	font-family: blanka-regular;
+}
+
+/*___________________________________index.html CSS___________________________________*/
+
+#slidershow_mainid {grid-area:slidershow_mainid;}
+#vid { grid-area: vid; }
+#tile1 { grid-area: tile1; }
+#tile2 { grid-area: tile2; }
+#tile3 { grid-area: tile3; }
+#social { grid-area: social; }
+.final_footer_main_block{grid-area: final_footer_main_block;}
+.grid-container-index {
+	display: grid;
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+    grid-template-columns: auto auto auto;
+    grid-template-areas:
+		'logo nav nav'
+		'covid covid covid'
+		'vid vid vid'
+        'slidershow_mainid slidershow_mainid slidershow_mainid'
+		'tile1 tile2 tile3'
+		'social social social'
+        'final_footer_main_block final_footer_main_block final_footer_main_block';
+    background-color: white;
+}
+
+/*slide show css starts*/
+/* We learnt to built slide-show(in just CSS and HTML) with the help of https://www.youtube.com/watch?v=9Irz0c-6UGw */
+
+.slidershow_main{
+  position: relative;
+  top: 0px;
+  left: 0%;
+  height: 420px;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+.slidershow{
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 8px solid rgb(120,60,132);
+  border-radius: 25px;
+  transform: translate(-50%,-50%);
+}
+
+.navigation_bar{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.bar{
+  width: 50px;
+  height: 17px;
+  border: 2px solid rgb(120,60,132);
+  background: rgb(120,60,132);
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+.bar:hover{
+  background: rgb(77,58,129);
+}
+
+.bar:active {
+  
+  transform: translateY(8px);
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slide{
+  width: 20%;
+  transition: 0.6s;
+}
+.slide3 img{
+  width: 100%;
+  height: 100%;
+}
+.s1 img{
+  width: 100%;
+  height: 100%;
+}
+.slide3{width: 20%;}
+
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+#r4:checked ~ .s1{
+  margin-left: -60%;
+}
+#r5:checked ~ .s1{
+  margin-left: -80%;
+}
+
+/*slide show css ends*/
+
+/* section video */
+video 
+{
+  width: 100%;
+  height: auto;
+}
+
+/* section tiles*/
+#tile2
+{
+	background-color: rgb(120,60,132);
+	color:white;
+    padding:20px;
+    border-radius: 30px;
+}
+#tile1, #tile3
+{
+	background-color: rgb(77,58,129);
+	color:white;
+    padding:20px;
+    border-radius: 30px;
+}
+
+/*section social*/
+ul.social {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li.social {
+  float: right;
+}
+
+li.social a.social {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px 10px 10px;
+  text-decoration: none;
+}
+.social{
+	font-size: 36px;
+}
+
+/*___video z-index___*/
+
+video{
+    position: relative;
+}
+
+.overlay{
+    
+    position: absolute;
+    z-index: 1;
+    top: 650px;
+    left: 340px;
+    color: white;
+    padding:10px;
+    border:8px solid white;
+}
+
+/*___________________________________ticket.html CSS__________________________________*/
+
+#tp1 { grid-area: tp1; }
+#tp2 { grid-area: tp2; }
+#tp3 { grid-area: tp3; }
+#tp4 { grid-area: tp4; }
+#voucher { grid-area: voucher; }
+#paymentMethods { grid-area: paymentMethods; }
+#social { grid-area: social; }
+.ticket_page_content{grid-area: ticket_page_content;}
+
+.grid-container-ticket {
+	display: grid;
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas:
+		'logo logo nav nav'
+		'covid covid covid covid'
+		'ticket_page_content ticket_page_content ticket_page_content ticket_page_content'
+		'social social social social'
+        'final_footer_main_block final_footer_main_block final_footer_main_block final_footer_main_block';
+    background-color: white;
+}
+
+.ticket_page_content{
+    display: grid;
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas:
+		'tp1 tp2 tp3 tp4'
+        'voucher . . paymentMethods';
+    padding: 25px;
+    background-image: url(img/payment_image.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+    height: 420px;
+}
+
+#tp1, #tp3, #paymentMethods,#vpp10 .ticket-page-info1{
+    font-family: Lora, serif; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 1em;
+    background-color: rgb(77,58,129);
+    color: white;
+    padding:20px;
+    border:2px solid lightgray;
+    border-radius: 20px;
+    margin: auto;
+    height: 150px;
+    width: 300px;
+}
+
+#tp2, #tp4, #voucher,#vpp9 .ticket-page-info{
+    font-family: Lora, serif; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 1em;
+    background-color: rgb(120,60,132);
+    color: white;
+    padding:20px;
+    border:2px solid lightgray;
+    border-radius: 20px;
+    margin: auto; 
+    height: 150px;
+    width: 300px;
+}
+
+/*___ticket page animation___*/
+#tp1:hover,#tp2:hover,#tp3:hover,#tp4:hover,#voucher:hover,#paymentMethods:hover{
+     position: relative;
+     animation-name: animation8;
+     animation-duration: 0.2s;
+     animation-fill-mode: forwards;
+}
+
+#tp1:hover,#tp2:hover,#tp3:hover,#tp4:hover,#voucher:hover{
+     cursor: pointer;
+}
+
+@keyframes animation8 {
+  from  { left:0px; top:0px;}
+  to  { left:-10px; top:-10px; background-color: lightyellow; color: black;}
+}
+
+/*___________________________________visit.html CSS___________________________________*/
+
+#vpp1{grid-area: one;}
+#vpp2{grid-area: two;}
+#vpp3{grid-area: three;}
+#vpp4{grid-area: four;}
+#vpp5{grid-area: five;}
+#vpp6{grid-area: six;}
+#visit_logo{grid-area:visit_logo;}
+#visit_nav{grid-area:visit_nav;}
+#visit_covid{grid-area:visit_covid;}
+#visit_social{grid-area:visit_social;}
+
+#vpp1 .visit-page-info1{
+    font-family: Lora, serif; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 1em;
+    background-color: white;
+    color: black;
+    padding:20px;
+    border:2px solid white;
+    margin:2px;    
+}
+
+#vpp3, #vpp5, #vpp7 .visit-page-info1{
+    font-family: Lora, serif; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 1em;
+    background-color: rgb(120,60,132);
+    color: white;
+    padding:20px;
+    border:2px solid lightgray;
+    margin:2px; 
+}
+
+#vpp2, #vpp4, #vpp6, #vpp8 .visit-page-info{
+    font-family: Lora, serif; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 1em;
+    background-color: rgb(120,60,132);
+    color: white;
+    padding:20px;
+    border:2px solid lightgray;
+    margin:2px; 
+}
+
+.grid-container-visit{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-areas:
+      'visit_logo visit_nav visit_nav'
+      'visit_covid visit_covid visit_covid'
+      'one one one'
+      'four four six'
+      'five two three'
+      'visit_social visit_social visit_social'
+      'final_footer_main_block final_footer_main_block final_footer_main_block';
+  background-color: white;
+}
+
+/*___visit image css modification___*/
+.image_map {
+     box-shadow: 15px 15px 8px #bbbbbb;
+     animation-name: animation1;
+     animation-duration: 2s;
+     animation-fill-mode: forwards;
+}
+
+@keyframes animation1 {
+    from{width:0px; height:0;}
+    to {transform: rotate(720deg); width:877px; height:620px;}
+}
+
+#vpp1{
+    height: 820px;
+}
+
+/*___visit animation css modification___*/
+
+#vpp2:hover, #vpp3:hover, #vpp4:hover, #vpp5:hover, #vpp6:hover{
+     position: relative;
+     animation-name: animation4;
+     animation-duration: 0.2s;
+     animation-fill-mode: forwards;
+}
+
+@keyframes animation4 {
+  from {left:0px; top:0px;}
+  to {left:-10px; top:-10px; background-color: rgb(77,58,129);}
+}
+
+/*_____________________________FOOTER COMMON CSS_______________________________________*/
+.final_footer1{grid-area: final_footer1;}
+.final_footer2{grid-area: final_footer2;}
+.final_footer3{grid-area: final_footer3;}
+.final_footer4{grid-area: final_footer4;}
+.final_footer5{grid-area: final_footer5;}
+.final_footer6{grid-area: final_footer6;}
+
+
+
+.final_footer{
+  display: grid;
+  height: 300px;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas:'final_footer1 final_footer2 final_footer3 final_footer4'
+                      'final_footer5 final_footer5 final_footer6 final_footer6';
+  background-color: #f7f7f7;
+  padding: 80px;  
+}
+
+.final_footertext{
+    text-align:left;
+    font-size: 26px;
+    font-weight: bolder;
+    font-family: Georgia, serif;
+    color: black;
+    line-height: 2;
+    padding-left: 80px;   
+}
+
+.final_footer_main_block{
+    background: #f7f7f7;  
+}
+
+.our_links{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: Arial Narrow, sans-serif ;
+    color: rgb(120,60,132);  
+}
+
+.our_links:hover{color: aqua; cursor: pointer;}
+
+.line_gap{line-height: 1.4;}
+
+.line_new{
+    font-size: 18px;
+    font-weight: normal;
+    font-family: Arial Narrow, sans-serif ;
+    color: black;
+    line-height: 1.3;
+    width: 300px;
+}
+.news_form{
+    display: flex;
+    padding-top: 20px;
+}
+
+#our_news_form{
+    border-radius: 25px 0px 0px 25px;
+    text-align: center;
+    width: 300px;
+    border: none;
+}
+
+.iconnews{
+    height: 35px;
+    border-radius: 0px 25px 25px 0px;
+    background: rgb(120,60,132);
+    cursor: pointer;
+     width: 70px;
+    text-align:center;
+    color: white;
+    margin-left: -2%;
+}
+
+.iconnews:hover{
+    background: aqua;
+}
+
+.iconnews:active{
+     transform: translate(4px,4px);
+}
+
+.final_footer5{
+    padding-top: 55px;
+    padding-left: 80px;
+}
+
+.language_footer{
+    color: rgb(120,60,132);
+    padding-top: 3px;
+    
+}
+
+.final_footer6{
+    display: flex;
+    padding-top: 55px;
+    padding-left: 0px;
+    position: relative;
+}
+
+.final_footer6_inbuild{
+    display: flex;
+    padding-top: 0px;
+    position: absolute;
+    left: 310px;
+}
+
+.language_main{
+    padding-left: 8px;
+}
+
+.language_spaceong{
+    padding-left: 8px; 
+}
+.language_spaceong:hover{color: aqua; cursor: pointer;}
+
+

@@ -1,0 +1,220 @@
+<!-- definition that this document is an HTML5 document -->
+<!DOCTYPE html>
+
+<!-- declaration of the language Web page. This is meant to assist search engines and browsers -->
+<html lang="en">
+<link rel=“canonical“ href=”index.hmtl”>
+
+<html>
+	
+<!-- HEAD SECTION that contains all the invisible (meta) information about the page -->
+<head>
+  <!--appears in browser tab-->
+  <title>XR Adventure Park - Buy ticket </title>
+	
+  <!--encode any character of pretty much any language and browser knows how to interpret every character-->
+  <meta charset="utf-8">
+	
+  <!--description might be found by a service such as Google, which is building up a comprehensive list of pages around the web and gives some clue as to what the content will be-->
+  <meta name="description" content="Explore the first XR Adventure Park ever -  buy your tickets, plan your visit and stay updated on special events!">
+	
+  <!--keywords so that search engines will be able to find the page and classify it accordingly - and when you search for key words in a search engine, it might come up with this page. -->
+  <meta name="keywords" content="xr park, augmented reality, virtual reality, xr, attractions, attraction1Name, attraction2Name, tickets, events, events, visit, opening times, plan, fun, action">	
+  <meta name="author" content="teamWork">
+	
+  <!--define how the page is presented on a variety of different devices, here: use the whole width of the device and scale to size one -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--refresh the page every 600 seconds-->
+  <meta name="refresh" content="600">
+	
+  <!--(no)index specifies if the site should get indexed by the search engine; (no)follow specifies if the robot can follow the link on the page to drill down into the site. Since site is in development, both are set to no-->
+  <meta name="robots" content="noindex,nofollow">
+	
+  <!--allow webpage to become a rich object in social networks-->
+  <meta name="og:image" property="og:image" content="picURL">
+  <meta name="og:title" property="og:title" content="XR Adventure Park">
+  <meta name="og:description" property="og:description" content="Explore the first XR Adventure Park ever -  buy your tickets, plan your visit and stay updated on special events!">
+  <meta name="og:url" property="og:url" content="pageURL">
+
+  <!-- reference to external stylesheet-->
+  <link rel="stylesheet" href="sitestyle.css">
+
+  <!-- google font pairings reference-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+    
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- google font icons reference-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<!-- BODY SECTION that contains the structure for all the visble content -->
+<body>
+
+<div class="grid-container-ticket">
+    <!-- Park logo HEADER -->
+    <div id="logo">
+		<a class="logo" href="index.html" target="_self"><img src="img/parkLogo.svg" alt="park logo" width="180" height="180" onerror="this.src='img/logo.jpg'"></a>
+	</div>
+	<!-- Navigation bar HEADER -->
+    <div id="nav">
+		<ul class="nav">
+			 <li style="float:right"><a href="index.html"><i class="material-icons">shopping_basket</i></a></li>
+			 <li style="float:right"><a href="index.html"><i class="material-icons">language</i></a></li>
+			 <li style="float:right"><a href="index.html"><i class="material-icons">accessible_forward</i></a></li>
+			 <li style="float:right" class="search"><input type="text" placeholder="Search.."></li>
+		</ul>
+		<ul class="nav">
+			<li></li>
+			<li class="nav" style="float:right"><a class="nav" href="index.html">EXPLORE PARK</a></li>
+			<li class="nav" style="float:right"><a class="nav" href="visit.html">PLAN VISIT</a></li>
+			<li class="nav" style="float:right"><a class="nav" href="ticket.html">BUY TICKET</a></li>
+		</ul>
+	</div>	
+    <!-- Covid information HEADER -->
+    <div id="covid">
+		<p class="attention">Find current visitor information reg. Covid-19 <a href="ticket.html" style="color:black; font"><u>here</u></a>.</p>
+	</div>
+   
+    <!-- START PAGE SPECIFIC SECTION-->
+    
+    <!--div for th block of the main part-->
+    
+    <div class="ticket_page_content">
+  
+        <!-- Tile 1 on ticket page - day-ticket -->
+        <div id = "tp1">
+            <div class="ticket-page-info1"> 
+                <h3> DAY-TICKET </h3>
+                <p>Buy online and save time!</p>
+                <p>Only £40 each</p>
+            </div>
+        </div>
+
+        <!-- Tile 2 on ticket page - annual passes -->
+        <div id = "tp2">
+            <div class="ticket-page-info">
+                <h3> ANNUAL PASSES </h3>
+                <p>Get unlimited visits for the 2021 season!</p>
+                <p>Only £100.00 each</p>
+            </div>
+        </div>
+
+        <!-- Tile 3 on ticket page - overnight stay -->
+        <div id = "tp3">
+            <div class="ticket-page-info1">
+                <h3> BOOK OVERNIGHT STAY </h3>
+                <p>Exlusive hotel inside our park!</p>
+                <p>Rates from £150.00 </p>
+            </div>
+        </div>
+     
+        <!-- Tile 4 on ticket page - deals -->
+        <div id = "tp4">
+            <div class="ticket-page-info">
+                <h3> HOT DEALS </h3>
+                <p> Special prices for more than 3 tickets! </p>
+            </div>
+        </div>
+    
+        <!-- Tile 5 on ticket page - vouchers -->
+        <div id = "voucher">
+            <div class="ticket-page-info">
+                <h3>BUY VOUCHER</h3>
+            </div>
+        </div>
+
+        <!-- Tile 6 on ticket page - payment methods -->
+        <div id = "paymentMethods">
+            <div class="ticket-page-info1">
+                <h4>Payment Methods</h4>
+                <img src="img/visa.jpg" alt="logo visa" width="100" height="50">
+                <img src="img/mastercard.png" alt="logo Master Card" width="100" height="50">
+                <img src="img/amex.jpg" alt="logo American Express" width="80" height="50">
+                <img src="img/paypal.png" alt="logo PayPal" width="80" height="50">
+            </div>
+        </div>
+    </div>
+
+    <!-- END PAGE SPECIFIC SECTION-->    
+  
+    <!-- Social media FOOTER -->    
+	<div id="social">
+	    <ul class="social">
+			<li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">feed</i></a></li>
+			<li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">thumb_up_alt</i></a></li>
+			<li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">android</i></a></li>
+			<li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">facebook</i></a></li>
+	    </ul>
+	</div>
+
+    <!-- General information FOOTER -->
+    <div class="final_footer_main_block">
+        <div class="final_footer">
+
+            <div class="final_footer1 final_footertext">
+                Our Park 
+                <div class="line_gap">
+                    <a class="our_links">Top Rides</a>
+                    <br><a class="our_links">Park Plan</a>
+                    <br><a class="our_links">Combos And Packs</a>
+                    <br><a class="our_links">Family Areas</a>
+                    <br><a class="our_links">Latest Updates</a>
+                </div>
+            </div>
+            <div class="final_footer2 final_footertext">
+                About Us
+                <div class="line_gap">
+                    <a class="our_links">Who We Are</a>
+                    <br><a class="our_links">Daily Events</a>
+                    <br><a class="our_links">Park Blogs</a>
+                    <br><a class="our_links">Our Partners</a>
+                    <br><a class="our_links">Community Relations</a>
+                </div>
+            </div>
+            <div class="final_footer3 final_footertext">
+                Legal
+                <div class="line_gap">
+                    <a class="our_links">Privacy Policy</a>
+                    <br><a class="our_links">Terms and Conditions</a>
+                    <br><a class="our_links">affiliations</a>
+                    <br><a class="our_links">Press Relations</a>
+                    <br><a class="our_links">Copyright and Trademark</a>
+                </div>
+            </div>
+            <div class="final_footer4 final_footertext">
+                Newsletter
+                <div class="line_new">
+                 Sign up today to get the latest information about our Theme Park.
+                </div>
+                <div class="news_form">
+                    <input id="our_news_form" type="email" name="mail" placeholder="Enter your Email" required>
+                    <i class="fa fa-paper-plane iconnews"></i> 
+                </div>
+            </div>
+            <div class="final_footer5">
+                © XR Adventure Park, Inc 2021. All Rights Reserved.
+            </div>
+            <div class="final_footer6">
+                <div class="final_footer6_inbuild">
+                <i class="fa fa-language fa-1g language_footer"></i> 
+                <div class="language_main">
+                     Change Language:
+                </div>
+                <a class="language_spaceong">English</a> 
+                <a class="language_spaceong">普通话</a> 
+                <a class="language_spaceong">Español</a> 
+                <a class="language_spaceong">हिन्दी</a> 
+                <a class="language_spaceong">Française</a> 
+                <a class="language_spaceong">русскийदी</a> 
+                </div>
+            </div>
+        </div>
+   </div>
+</div>
+    
+</body>
+</html>
